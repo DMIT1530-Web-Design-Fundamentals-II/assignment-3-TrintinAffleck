@@ -139,12 +139,14 @@ section {
 }
 
 .cards {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
     gap: 0.8rem;
 }
 .card {
-    width: 19.125rem;
+    flex: 0 0 19.125rem;
+    margin: 2rem 1rem;
     height: 300px;
     border: 1px solid purple;
 }
@@ -455,6 +457,11 @@ textarea {
     color: white;
 }
 
+header > img {
+    height: 53px;
+    width: 200px;
+}
+
 @media screen and (min-width: 760px) and (max-width: 1190px) {
     /* Your CSS code for the specified screen size range goes here */
     nav {
@@ -462,7 +469,6 @@ textarea {
     }
     .hamburger {
         display: flex;
-        border: solid black 2px;
         height: 40px;
         width: 40px;
     }
@@ -510,15 +516,40 @@ textarea {
     .project-btn {
         width: 50%;
     }
-}
 
+    .hamburger {
+        width: 35px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+    }
+}
+.work > h2 {
+    width: 317px;
+    height: 53px;
+    font-size: 48px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: #191654;
+    font-weight: 400;
+    font-family: "Monoton";
+}
 @media screen and (min-width: 320px) and (max-width: 759px) {
     nav {
         display: none;
     }
     .hamburger {
         display: flex;
-        border: solid black 2px;
         height: 40px;
         width: 40px;
     }
@@ -529,7 +560,7 @@ textarea {
         align-items: start;
         overflow: visible;
         position: absolute;
-        bottom: 75.5%;
+        bottom: 70%;
         width: 100%;
         background-color: white;
     }
@@ -540,6 +571,23 @@ textarea {
 
     ul li a {
         font-size: 30px;
+    }
+
+    .hamburger {
+        width: 35px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
     }
 
     .work > h2 {
