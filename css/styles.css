@@ -36,7 +36,6 @@ header,
 nav {
     display: flex;
     align-items: center;
-    width: max-content;
 }
 
 #search-bar,
@@ -50,21 +49,18 @@ input {
 }
 
 header {
+    display: inline-flex;
     justify-content: space-between;
     padding: 0 1rem;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1000;
     height: fit-content;
     width: 100%;
+    position: sticky;
+    top: 0;
 }
 
-header > h2 {
-    height: 53px;
-    font-size: 48px;
-    line-height: 58px;
-    text-transform: uppercase;
-    color: #191654;
-    font-weight: 400;
-    font-family: "Monoton";
-}
 
 h1 {
     font-size: 64px;
@@ -598,10 +594,6 @@ header > img {
         color: #191654;
         font-weight: 400;
         font-family: "Monoton";
-    }
-
-    header > h2 {
-        font-size: 25px;
     }
 
     .hero {
